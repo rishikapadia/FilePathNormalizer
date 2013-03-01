@@ -1,0 +1,7 @@
+def normalize()
+	
+
+
+	end
+
+normalize()
