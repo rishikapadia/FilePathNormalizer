@@ -8,10 +8,10 @@ def normalize()
 
 	while (i >= 0)
 		if (list[i] == ".")
-			list.delete_at(i)
+			list.delete_at(i)     # remove all names that refer to current directory
 		elsif (list[i] == "..")
 			list.delete_at(i)
-			i -= 1
+			i -= 1             # remove all ".." and the name before it, if possible
 			if (i > 0)
 				list.delete_at(i)
 			end
@@ -20,7 +20,7 @@ def normalize()
 	end
 	
 	name = ""
-	list.each do |i|
+	list.each do |i|         # reassemble file path
 		name += "/#{i}"
 	end
 
